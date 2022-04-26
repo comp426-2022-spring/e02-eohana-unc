@@ -47,12 +47,14 @@ function App() {
     let currentE01 = document.querySelector('#e01').value
     let currentE02 = document.querySelector('#e02').value
     let currentMidterm = document.querySelector('#midterm').value
+    let currentFinal = document.querySelector('#final').value
+    let currentA99 = document.querySelector('#a99').value
     let currentCommits = document.querySelector('#commits').value
 
     if(currentSum==='')
     return;
 // 2. This line is where you add the points all together. Add your other variable references here. Make sure that they match what is above and what is below in the HTML form
-    let sum = parseInt(currentA00) + parseInt(currentA01) + parseInt(currentA02) + parseInt(currentA03) + parseInt(currentA04) + parseInt(currentA05) + parseInt(currentE01) + parseInt(currentE02) + parseInt(currentCommits) + parseInt(currentMidterm);
+    let sum = parseInt(currentA00) + parseInt(currentA01) + parseInt(currentA02) + parseInt(currentA03) + parseInt(currentA04) + parseInt(currentA05) + parseInt(currentE01) + parseInt(currentE02) + parseInt(currentCommits) + parseInt(currentMidterm) + parseInt(currentFinal) + parseInt(currentA99);
     setCurrentSum(sum);
   }
 
@@ -76,6 +78,8 @@ function App() {
             <input type="text" id="e01" placeholder="e01" /><br/><br/>
             <input type="text" id="e02" placeholder="e02" /><br/><br/>
             <input type="text" id="midterm" placeholder="midterm" /><br/><br/>
+            <input type="text" id="final" placeholder="final" /><br/><br/>
+            <input type="text" id="a99" placeholder="a99" /><br/><br/>
             <input type="text" id="commits" placeholder="commits" /><br/><br/>
             <button onClick={Add}>Add</button>
             <button onClick={Clear}>Clear</button>
